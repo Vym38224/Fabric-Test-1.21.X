@@ -1,6 +1,7 @@
 package net.vymetal.testmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.vymetal.testmod.block.ModBlocks;
 import net.vymetal.testmod.item.ModItemGroups;
 import net.vymetal.testmod.item.ModItems;
@@ -18,5 +19,7 @@ public class TestMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 	}
 }
